@@ -20,7 +20,7 @@ grant all on bookstore.* to '{yourUserName}'@localhost identified by '{yourPassw
 4. Open the file /pkg/config/app.go
 5. Edit line 11 with {yourUserName} and {yourPasswd} set in step 3 as follows:-
 
-d, err := gorm.Open("mysql", "{yourUserName}:{yourPasswd}!!!@/bookstore?charset=utf8mb4&parseTime=True&loc=Local")
+d, err := gorm.Open("mysql", "{yourUserName}:{yourPasswd}@/bookstore?charset=utf8mb4&parseTime=True&loc=Local")
 
 6. Run "go build" in the /cmd/main directory in your terminal
 7. Run "go run main.go" command in the terminal
